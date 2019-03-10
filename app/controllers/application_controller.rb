@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
         !!current_user
     end
 
-    def required_user
+    def require_user
         if !logged_in?
             flash[:error] = "You must be logged in to perform that action"
             redirect_to login_path
