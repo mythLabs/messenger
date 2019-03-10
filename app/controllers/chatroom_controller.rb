@@ -3,6 +3,6 @@ class ChatroomController < ApplicationController
 
     def index
         @message = Message.new
-        @messages = Message.order(created_at: :desc)
+        @messages = Message.custom_display
     end
 end
